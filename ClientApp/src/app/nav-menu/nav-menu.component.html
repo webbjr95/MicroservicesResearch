@@ -1,0 +1,12 @@
+<div class="bg-light d-flex pl-4 pr-4 pb-1" id="navContainer">
+  <div>
+    <button mat-icon-button [matMenuTriggerFor]="menu" class="menu">
+      <span class="material-icons text-white menu-icon">menu</span>
+    </button>
+    <mat-menu #menu="matMenu">
+      <button mat-menu-item [routerLink]="[dashboardRoute]">Dashboard</button>
+    </mat-menu>
+  </div>
+
+  <img src="/assets/images/f23-logo.svg" alt="feature[23]" class="img-logo"/>
+</div>  

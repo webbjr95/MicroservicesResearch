@@ -1,0 +1,76 @@
+@import '~@angular/material/theming';
+@include mat-core(); // Only needed once for all themes variations
+
+// Created with http://mcg.mbitson.com
+$f23-primary: (
+  50: #f8e5e5,
+  100: #eebfbf,
+  200: #e39494,
+  300: #d76969,
+  400: #cf4848,
+  500: #c62828,
+  600: #c02424,
+  700: #b91e1e,
+  800: #b11818,
+  900: #a40f0f,
+  A100: #ffd4d4,
+  A200: #ffa1a1,
+  A400: #ff6e6e,
+  A700: #ff5454,
+  contrast: (
+    50: #000000,
+    100: #000000,
+    200: #000000,
+    300: #000000,
+    400: #ffffff,
+    500: #ffffff,
+    600: #ffffff,
+    700: #ffffff,
+    800: #ffffff,
+    900: #ffffff,
+    A100: #000000,
+    A200: #000000,
+    A400: #000000,
+    A700: #000000,
+  ),
+);
+
+$f23-secondary: (
+  50: #edeaea,
+  100: #d3c9c9,
+  200: #b6a6a6,
+  300: #988282,
+  400: #826767,
+  500: #6c4c4c,
+  600: #644545,
+  700: #593c3c,
+  800: #4f3333,
+  900: #3d2424,
+  A100: #ff8585,
+  A200: #ff5252,
+  A400: #ff1f1f,
+  A700: #ff0606,
+  contrast: (
+    50: #000000,
+    100: #000000,
+    200: #000000,
+    300: #000000,
+    400: #ffffff,
+    500: #ffffff,
+    600: #ffffff,
+    700: #ffffff,
+    800: #ffffff,
+    900: #ffffff,
+    A100: #000000,
+    A200: #000000,
+    A400: #ffffff,
+    A700: #ffffff,
+  ),
+);
+
+$f23-palette-primary: mat-palette($f23-primary);
+$f23-palette-accent: mat-palette($f23-secondary);
+
+$f23-theme: mat-dark-theme($f23-palette-primary, $f23-palette-accent);
+
+@include angular-material-theme($f23-theme);

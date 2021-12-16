@@ -1,0 +1,33 @@
+@import "~bootstrap/scss/functions";
+@import "~bootstrap/scss/variables";
+
+
+$primary: #c62828;
+$secondary: #6c4c4c;
+$active: #13AF0A;
+$step: #2EABB6;
+$progress: #FFB25B;
+$danger: #FF0000;
+$gray: #7F7F7F;
+$dark: #8e0000;
+$light: #ff5f52;
+$disabled: #C2C2C2;
+$gray-border: #AEBBC6;
+
+$theme-colors: (
+    "primary": $primary,
+    "secondary": $secondary,
+    "active": $active,
+    "step": $step,
+    "progress": $progress,
+    "danger": $danger,
+    "gray": $gray,
+    "dark": $dark,
+    "light": $light,
+    "disabled": $disabled,
+    "gray-border": $gray-border
+);
+
+$enable-gradients: true;
+
+@import "bootstrap";
