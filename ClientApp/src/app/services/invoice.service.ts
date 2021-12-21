@@ -20,13 +20,14 @@ export class InvoiceService {
   }
 
   getInvoicesMock(): Observable<InvoiceListViewResponse> {
-    const numOfItems = 10
+    const numOfItems = 76
 
     var response = new InvoiceListViewResponse()
     response.total = numOfItems
 
     for (let index = 0; index < numOfItems; index++) {
-      response.items.push(new Invoice(`${index}`.repeat(6)))
+      const id = Math.floor(100000 + Math.random() * 900000)
+      response.items.push(new Invoice(id.toString()))
     }
 
     return of(response)

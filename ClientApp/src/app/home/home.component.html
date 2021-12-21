@@ -3,18 +3,65 @@
 </ng-template>
 
 <ng-template #loaded>
-  <h1>Hello, world!</h1>
-  <p>Welcome to your new single-page application, built with:</p>
-  <ul>
-    <li><a href='https://get.asp.net/'>ASP.NET Core</a> and <a href='https://msdn.microsoft.com/en-us/library/67ef8sbd.aspx'>C#</a> for cross-platform server-side code</li>
-    <li><a href='https://angular.io/'>Angular</a> and <a href='http://www.typescriptlang.org/'>TypeScript</a> for client-side code</li>
-    <li><a href='http://getbootstrap.com/'>Bootstrap</a> for layout and styling</li>
-  </ul>
-  <p>To help you get started, we've also set up:</p>
-  <ul>
-    <li><strong>Client-side navigation</strong>. For example, click <em>Counter</em> then <em>Back</em> to return here.</li>
-    <li><strong>Angular CLI integration</strong>. In development mode, there's no need to run <code>ng serve</code>. It runs in the background automatically, so your client-side resources are dynamically built on demand and the page refreshes when you modify any file.</li>
-    <li><strong>Efficient production builds</strong>. In production mode, development-time features are disabled, and your <code>dotnet publish</code> configuration automatically invokes <code>ng build</code> to produce minified, ahead-of-time compiled JavaScript files.</li>
-  </ul>
-  <p>The <code>ClientApp</code> subdirectory is a standard Angular CLI application. If you open a command prompt in that directory, you can run any <code>ng</code> command (e.g., <code>ng test</code>), or use <code>npm</code> to install extra packages into it.</p>  
+  <h1 class="center-header">Microservices in the Year of 2022</h1>
+
+  <mat-card>
+    <mat-card-header>
+      <mat-card-title>What Are Microservices?</mat-card-title>
+    </mat-card-header>
+    <mat-card-content>
+      <p>The cloud drives today's application development and IT system management. Modern cloud applications need to be
+        fast, agile, massively scalable, and reliable.</p>
+      <p>Containers help applications achieve all of those requirements. But putting an application into a container
+        without following a design pattern is like getting into a vehicle and hoping to find way to a new city without a
+        map (or GPS-enabled phone). You may end up at your destination, but the route probably wasn't the most
+        efficient.</p>
+      <p>This is where a microservice architecture comes in. Microservices enable an approach to software development
+        and deployment that is perfectly suited to the agility, scale, and reliability requirements of modern cloud
+        applications.</p>
+    </mat-card-content>
+  </mat-card>
+
+  <mat-card>
+    <mat-card-header>
+      <mat-card-title>What is a microservice architecture?</mat-card-title>
+    </mat-card-header>
+    <mat-card-content>
+      <p>As the name implies, a microservices architecture is an approach in which a large application is split up into
+        a set of smaller services. Each service runs in its own process and communicates with other processes using
+        protocols such as HTTP/HTTPS, WebSockets, or AMQP. Each microservice implements a specific end-to-end domain or
+        business capability within a certain context boundary, and each must be developed autonomously and be deployable
+        independently. Finally, each microservice should own its related domain data model and domain logic, and could
+        be based on different data storage technologies (SQL, NoSQL) and different programming languages.</p>
+      <p>
+        Some key characteristics of microservices are:
+      </p>
+      <ul>
+        <li>Microservices are small, independent, and loosely coupled.</li>
+        <li>Each microservice has a separate codebase, which can be managed by a small development team.</li>
+        <li>Microservices are deployed independently. A team can update an existing microservice without rebuilding and
+          redeploying the entire application.</li>
+        <li>Microservices are responsible for persisting their data or external state in their respective databases.
+          Unlike the monolithic architecture, microservices do not share databases.</li>
+        <li>Microservices communicate with each other by using well-defined APIs. Internal implementation details of
+          each service are hidden from other services.</li>
+        <li>Supports polyglot programming. For example, microservices don't need to share the same technology stack,
+          libraries, or frameworks.</li>
+      </ul>
+    </mat-card-content>
+  </mat-card>
+
+  <mat-card>
+    <mat-card-header>
+      <mat-card-title>.NET Core and Microservices</mat-card-title>
+    </mat-card-header>
+    <mat-card-content>
+      <p>Like other development platforms, Microsoft has invested heavily to meet the requirements of an architecture
+        based on microservices. Today .NET provides many resources for this purpose.</p>
+      <p>Microsoft’s official website has a lot of content about microservices-based architecture, including ebooks,
+        tutorials, videos and challenges to help developers work with them.</p>
+      <p>With .NET 6, developing apps in a microservices architecture became even easier due to the new minimal APIs
+        feature that simplifies many processes that were once mandatory but are now no longer needed.</p>
+    </mat-card-content>
+  </mat-card>
 </ng-template>

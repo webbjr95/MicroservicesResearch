@@ -9,5 +9,7 @@ import { Component } from '@angular/core';
 export class NavMenuComponent {
   constructor() { }
 
-  dashboardRoute: string = '/dashboard'
+  homeRoute: string = ''
+  invoiceListRoute: string = '/invoices'
+  orderListRoute: string = '/orders'
 }

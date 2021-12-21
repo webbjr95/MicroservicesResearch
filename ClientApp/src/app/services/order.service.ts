@@ -21,13 +21,14 @@ export class OrderService {
   }
 
   getOrdersMock(): Observable<OrderListViewResponse> {
-    const numOfItems = 10
+    const numOfItems = 24
 
     var response = new OrderListViewResponse()
     response.total = numOfItems
 
     for (let index = 0; index < numOfItems; index++) {
-      response.items.push(new Order(`${index}`.repeat(6)))
+      const id = Math.floor(100000 + Math.random() * 900000)
+      response.items.push(new Order(id.toString()))
     }
 
     return of(response)

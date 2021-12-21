@@ -21,17 +21,16 @@ export class OrderListComponent implements OnInit, AfterViewInit {
     loadingNameState: string = 'Loading...'
 
     // TODO.JW: Add more defs once we expand the object.
-    displayedColumns: string[] = ['id']
+    displayedColumns: string[] = ['id', 'countryCode', 'productCode', 'quantity', 'price', 'totalCost', 'status']
     orderDataSource = new MatTableDataSource<Order>()
-    orderLength: number = 0
+    orderTotalLength: number = 0
 
     @ViewChild(MatPaginator) paginator: MatPaginator;
     @ViewChild(MatSort) sort: MatSort;
 
     ngOnInit() {
         this.orderService.getOrdersMock().subscribe(response => {
-            // TODO.JW: Change this to assign the response to the data source
-            this.orderLength = response.total
+            this.orderTotalLength = response.total
             this.orderDataSource = new MatTableDataSource(response.items)
             this.isLoading = false
         },

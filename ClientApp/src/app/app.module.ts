@@ -16,6 +16,8 @@ import { MatTableModule } from '@angular/material/table';
 import { InvoiceListComponent } from './invoices/invoice-list.component';
 import { OrderListComponent } from './orders/order-list.component';
 import { MatPaginatorModule } from '@angular/material/paginator';
+import { MatSortModule } from '@angular/material/sort';
+import { MatCardModule } from '@angular/material/card';
 
 
 function configurationInitializer(handler: HttpBackend, configurationService: ConfigurationService) {
@@ -36,9 +38,11 @@ function configurationInitializer(handler: HttpBackend, configurationService: Co
     BrowserModule.withServerTransition({ appId: 'ng-cli-universal' }),
     HttpClientModule,
     FormsModule,
+    MatCardModule,
     MatMenuModule,
     MatPaginatorModule,
     MatProgressSpinnerModule,
+    MatSortModule,
     MatTableModule,
     RouterModule.forRoot([
       { path: '', component: HomeComponent, pathMatch: 'full' },

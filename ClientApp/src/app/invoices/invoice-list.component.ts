@@ -21,7 +21,7 @@ export class InvoiceListComponent implements OnInit, AfterViewInit {
     loadingNameState: string = 'Loading...'
 
     // TODO.JW: Add more defs once we expand the object.
-    displayedColumns: string[] = ['id']
+    displayedColumns: string[] = ['id', 'countryCode', 'productCode', 'quantity', 'price', 'totalCost', 'status']
     invoiceDataSource = new MatTableDataSource<Invoice>()
     invoiceTotalLength: number = 0
 
@@ -30,7 +30,6 @@ export class InvoiceListComponent implements OnInit, AfterViewInit {
 
     ngOnInit() {
         this.invoiceService.getInvoicesMock().subscribe(response => {
-            // TODO.JW: Change this to assign the response to the data source
             this.invoiceTotalLength = response.total
             this.invoiceDataSource = new MatTableDataSource(response.items)
             this.isLoading = false
