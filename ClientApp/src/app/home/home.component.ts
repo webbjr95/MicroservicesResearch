@@ -8,11 +8,11 @@ export class HomeComponent implements OnInit {
   constructor() { }
 
   isLoading: boolean = true
-  loadingNameState: string = 'Page loading...'
+  loadingNameState: string = 'Application loading...'
 
   ngOnInit() {
     setTimeout(() => {
-     this.isLoading = false 
+      this.isLoading = false
     }, 1500)
   }
 }

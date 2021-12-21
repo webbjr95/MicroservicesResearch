@@ -1,7 +1,7 @@
 import { BrowserModule } from '@angular/platform-browser';
-import { CUSTOM_ELEMENTS_SCHEMA, NgModule, NO_ERRORS_SCHEMA } from '@angular/core';
+import { APP_INITIALIZER, CUSTOM_ELEMENTS_SCHEMA, NgModule, NO_ERRORS_SCHEMA } from '@angular/core';
 import { FormsModule } from '@angular/forms';
-import { HttpClientModule } from '@angular/common/http';
+import { HttpBackend, HttpClientModule } from '@angular/common/http';
 import { RouterModule } from '@angular/router';
 import { AppComponent } from './app.component';
 import { NavMenuComponent } from './nav-menu/nav-menu.component';
@@ -11,16 +11,25 @@ import { MatMenuModule } from '@angular/material/menu';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { LoadingSpinnerComponent } from './loading-spinner/loading-spinner.component';
 import { MatProgressSpinnerModule } from '@angular/material/progress-spinner';
+import { ConfigurationService } from './services/configuration.service';
+import { MatTableModule } from '@angular/material/table';
+import { InvoiceListComponent } from './invoices/invoice-list.component';
+import { OrderListComponent } from './orders/order-list.component';
+import { MatPaginatorModule } from '@angular/material/paginator';
 
 
-
+function configurationInitializer(handler: HttpBackend, configurationService: ConfigurationService) {
+  return () => configurationService.loadConfiguration(handler).toPromise().then()
+}
 
 @NgModule({
   declarations: [
     AppComponent,
     HomeComponent,
+    InvoiceListComponent,
     LoadingSpinnerComponent,
-    NavMenuComponent
+    NavMenuComponent,
+    OrderListComponent
   ],
   imports: [
     BrowserAnimationsModule,
@@ -28,14 +37,21 @@ import { MatProgressSpinnerModule } from '@angular/material/progress-spinner';
     HttpClientModule,
     FormsModule,
     MatMenuModule,
+    MatPaginatorModule,
     MatProgressSpinnerModule,
+    MatTableModule,
     RouterModule.forRoot([
-      { path: '', component: HomeComponent, pathMatch: 'full' }
+      { path: '', component: HomeComponent, pathMatch: 'full' },
+      { path: 'invoices', component: InvoiceListComponent, pathMatch: 'full' },
+      { path: 'orders', component: OrderListComponent, pathMatch: 'full' }
     ]),
     ToastrModule.forRoot()
   ],
-  providers: [],
+  providers: [
+    { provide: APP_INITIALIZER, useFactory: configurationInitializer, deps: [HttpBackend, ConfigurationService], multi: true },
+  ],
   bootstrap: [AppComponent],
   schemas: [NO_ERRORS_SCHEMA, CUSTOM_ELEMENTS_SCHEMA]
 })
+
 export class AppModule { }

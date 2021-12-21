@@ -5,6 +5,7 @@ using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
 using Microsoft.OpenApi.Models;
+using Models.Configuration;
 using System;
 using System.IO;
 using System.Reflection;
@@ -27,7 +28,7 @@ namespace MicroservicesResearch
             {
                 x.SwaggerDoc("v1", new OpenApiInfo
                 {
-                    Version = "v1",
+                    Version = "1.0",
                     Title = "feature[23] MicroServices Research API"
                 });
 
@@ -36,13 +37,30 @@ namespace MicroservicesResearch
                 x.IncludeXmlComments(xmlPath);
             });
 
-
             services.AddControllersWithViews();
+            services.AddApiVersioning();
+
             // In production, the Angular files will be served from this directory
             services.AddSpaStaticFiles(configuration =>
             {
                 configuration.RootPath = "ClientApp/dist";
             });
+
+            // TODO: Address the CORS policy.
+            services.AddCors(options =>
+            {
+                options.AddDefaultPolicy(
+                builder =>
+                {
+                    builder.AllowAnyOrigin().AllowAnyMethod().AllowAnyHeader();
+                });
+            });
+
+
+            // TODO.JW: Consider making this into its own special configuration class.
+            // For fun, might include custom validation logic for each item. Should be an 
+            // interface which can be reused.
+            services.Configure<ApiSettingsOptions>(Configuration.GetSection(ApiSettingsOptions.ApiSettings));
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
@@ -67,12 +85,10 @@ namespace MicroservicesResearch
             }
 
             app.UseRouting();
-
+            app.UseCors();
             app.UseEndpoints(endpoints =>
             {
-                endpoints.MapControllerRoute(
-                    name: "default",
-                    pattern: "{controller}/{action=Index}/{id?}");
+                endpoints.MapControllers();
             });
 
             app.UseSwagger();
