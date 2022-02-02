@@ -1,0 +1,21 @@
+<mat-toolbar class="navbar" id="navContainer">
+  <div>
+    <button mat-icon-button [matMenuTriggerFor]="menu" class="menu">
+      <span class="material-icons menu-icon">menu</span>
+    </button>
+    <mat-menu #menu="matMenu">
+      <button mat-menu-item [routerLink]="[homeRoute]">Home Dashboard</button>
+      <button mat-menu-item [routerLink]="[invoiceListRoute]">Invoices Dashboard</button>
+      <button mat-menu-item [routerLink]="[orderListRoute]">Orders Dashboard</button>
+    </mat-menu>
+  </div>
+
+  <img src="/assets/images/f23-logo.svg" alt="feature[23]" class="img-logo" />
+
+  <span class="spacer"></span>
+
+  <form [formGroup]="searchForm" (ngSubmit)="onSubmit()" autocomplete="off">
+    <input type="text" formControlName="search" maxlength="6" required placeholder="Identifier (e.g. 123456)" >
+    <button type="submit" mat-raised-button color="primary">Search</button>
+  </form>
+</mat-toolbar>

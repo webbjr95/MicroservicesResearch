@@ -1,0 +1,86 @@
+﻿IF NOT EXISTS (SELECT TOP 1 1 FROM [dbo].[Invoices]) 
+BEGIN
+	SET IDENTITY_INSERT [dbo].[Invoices] ON
+
+	INSERT INTO [dbo].[Invoices] (Id, Identifier, CountryCode, ProductCode, Price, Quantity, TotalCost, Status) VALUES (1, '000001', 'AR', '0462-0162', 8.59, 6, 51.54, 1);
+	INSERT INTO [dbo].[Invoices] (Id, Identifier, CountryCode, ProductCode, Price, Quantity, TotalCost, Status) VALUES (2, '000002', 'US', '11523-7350', 5.06, 4, 20.24, 4); 
+	INSERT INTO [dbo].[Invoices] (Id, Identifier, CountryCode, ProductCode, Price, Quantity, TotalCost, Status) VALUES (3, '000003', 'CN', '43376-210', 2.23, 5, 11.15, 4);
+	INSERT INTO [dbo].[Invoices] (Id, Identifier, CountryCode, ProductCode, Price, Quantity, TotalCost, Status) VALUES (4, '000004', 'CN', '11701-018', 6.32, 10, 63.2, 5); 
+	INSERT INTO [dbo].[Invoices] (Id, Identifier, CountryCode, ProductCode, Price, Quantity, TotalCost, Status) VALUES (5, '000005', 'CN', '13537-247', 7.79, 6, 46.74, 5); 
+	INSERT INTO [dbo].[Invoices] (Id, Identifier, CountryCode, ProductCode, Price, Quantity, TotalCost, Status) VALUES (6, '000006', 'CN', '50436-9787', 1.51, 8, 12.08, 3); 
+	INSERT INTO [dbo].[Invoices] (Id, Identifier, CountryCode, ProductCode, Price, Quantity, TotalCost, Status) VALUES (7, '000007', 'RU', '60505-7006', 4.99, 9, 44.91, 1); 
+	INSERT INTO [dbo].[Invoices] (Id, Identifier, CountryCode, ProductCode, Price, Quantity, TotalCost, Status) VALUES (8, '000008', 'ID', '33261-399', 7.35, 2, 14.7, 2);
+	INSERT INTO [dbo].[Invoices] (Id, Identifier, CountryCode, ProductCode, Price, Quantity, TotalCost, Status) VALUES (9, '000009', 'US', '54473-218', 4.58, 2, 9.16, 5); 
+	INSERT INTO [dbo].[Invoices] (Id, Identifier, CountryCode, ProductCode, Price, Quantity, TotalCost, Status) VALUES (10, '000010', 'BR', '0179-0124', 5.86, 7, 41.02, 2);
+	INSERT INTO [dbo].[Invoices] (Id, Identifier, CountryCode, ProductCode, Price, Quantity, TotalCost, Status) VALUES (11, '000011', 'RU', '66435-105', 0.38, 6, 2.28, 1);
+	INSERT INTO [dbo].[Invoices] (Id, Identifier, CountryCode, ProductCode, Price, Quantity, TotalCost, Status) VALUES (12, '000012', 'NE', '50991-583', 7.45, 1, 7.45, 4); 
+	INSERT INTO [dbo].[Invoices] (Id, Identifier, CountryCode, ProductCode, Price, Quantity, TotalCost, Status) VALUES (13, '000013', 'LV', '52584-493', 3.08, 5, 15.4, 1); 
+	INSERT INTO [dbo].[Invoices] (Id, Identifier, CountryCode, ProductCode, Price, Quantity, TotalCost, Status) VALUES (14, '000014', 'RU', '0037-4401', 4.34, 9, 39.06, 4); 
+	INSERT INTO [dbo].[Invoices] (Id, Identifier, CountryCode, ProductCode, Price, Quantity, TotalCost, Status) VALUES (15, '000015', 'CN', '66312-441', 2.85, 10, 28.5, 5); 
+	INSERT INTO [dbo].[Invoices] (Id, Identifier, CountryCode, ProductCode, Price, Quantity, TotalCost, Status) VALUES (16, '000016', 'JP', '54868-1103', 8.98, 9, 80.82, 5); 
+	INSERT INTO [dbo].[Invoices] (Id, Identifier, CountryCode, ProductCode, Price, Quantity, TotalCost, Status) VALUES (17, '000017', 'RU', '0187-0497', 4.96, 5, 24.8, 5);
+	INSERT INTO [dbo].[Invoices] (Id, Identifier, CountryCode, ProductCode, Price, Quantity, TotalCost, Status) VALUES (18, '000018', 'PH', '34666-151', 2.98, 10, 29.8, 5); 
+	INSERT INTO [dbo].[Invoices] (Id, Identifier, CountryCode, ProductCode, Price, Quantity, TotalCost, Status) VALUES (19, '000019', 'MA', '51346-110', 6.05, 1, 6.05, 5);
+	INSERT INTO [dbo].[Invoices] (Id, Identifier, CountryCode, ProductCode, Price, Quantity, TotalCost, Status) VALUES (20, '000020', 'ID', '58962-001', 0.81, 8, 6.48, 1); 
+	INSERT INTO [dbo].[Invoices] (Id, Identifier, CountryCode, ProductCode, Price, Quantity, TotalCost, Status) VALUES (21, '000021', 'MM', '55910-678', 9.65, 4, 38.6, 2); 
+	INSERT INTO [dbo].[Invoices] (Id, Identifier, CountryCode, ProductCode, Price, Quantity, TotalCost, Status) VALUES (22, '000022', 'PT', '54868-1798', 2.62, 6, 15.72, 1);
+	INSERT INTO [dbo].[Invoices] (Id, Identifier, CountryCode, ProductCode, Price, Quantity, TotalCost, Status) VALUES (23, '000023', 'FR', '65044-1665', 5.99, 10, 59.9, 3); 
+	INSERT INTO [dbo].[Invoices] (Id, Identifier, CountryCode, ProductCode, Price, Quantity, TotalCost, Status) VALUES (24, '000024', 'IE', '52125-311', 6.55, 10, 65.5, 3);
+	INSERT INTO [dbo].[Invoices] (Id, Identifier, CountryCode, ProductCode, Price, Quantity, TotalCost, Status) VALUES (25, '000025', 'CN', '0299-5770', 6.54, 3, 19.62, 4); 
+	INSERT INTO [dbo].[Invoices] (Id, Identifier, CountryCode, ProductCode, Price, Quantity, TotalCost, Status) VALUES (26, '000026', 'ZW', '54838-571', 5.95, 3, 17.85, 2); 
+	INSERT INTO [dbo].[Invoices] (Id, Identifier, CountryCode, ProductCode, Price, Quantity, TotalCost, Status) VALUES (27, '000027', 'IE', '0006-0568', 8.69, 3, 26.07, 4); 
+	INSERT INTO [dbo].[Invoices] (Id, Identifier, CountryCode, ProductCode, Price, Quantity, TotalCost, Status) VALUES (28, '000028', 'CZ', '52698-001', 3.00, 5, 15, 3);
+	INSERT INTO [dbo].[Invoices] (Id, Identifier, CountryCode, ProductCode, Price, Quantity, TotalCost, Status) VALUES (29, '000029', 'PL', '63739-564', 3.60, 8, 28.8, 2); 
+	INSERT INTO [dbo].[Invoices] (Id, Identifier, CountryCode, ProductCode, Price, Quantity, TotalCost, Status) VALUES (30, '000030', 'MN', '51621-046', 1.94, 4, 7.76, 4); 
+	INSERT INTO [dbo].[Invoices] (Id, Identifier, CountryCode, ProductCode, Price, Quantity, TotalCost, Status) VALUES (31, '000031', 'FR', '59746-003', 0.75, 10, 7.5, 5); 
+	INSERT INTO [dbo].[Invoices] (Id, Identifier, CountryCode, ProductCode, Price, Quantity, TotalCost, Status) VALUES (32, '000032', 'PH', '47593-342', 0.52, 7, 3.64, 5); 
+	INSERT INTO [dbo].[Invoices] (Id, Identifier, CountryCode, ProductCode, Price, Quantity, TotalCost, Status) VALUES (33, '000033', 'VE', '43419-028', 1.69, 5, 8.45, 5); 
+	INSERT INTO [dbo].[Invoices] (Id, Identifier, CountryCode, ProductCode, Price, Quantity, TotalCost, Status) VALUES (34, '000034', 'RU', '61703-344', 5.21, 5, 26.05, 4); 
+	INSERT INTO [dbo].[Invoices] (Id, Identifier, CountryCode, ProductCode, Price, Quantity, TotalCost, Status) VALUES (35, '000035', 'PE', '52125-051', 4.50, 2, 9, 2);
+	INSERT INTO [dbo].[Invoices] (Id, Identifier, CountryCode, ProductCode, Price, Quantity, TotalCost, Status) VALUES (36, '000036', 'FI', '0087-2773', 2.82, 4, 11.28, 4); 
+	INSERT INTO [dbo].[Invoices] (Id, Identifier, CountryCode, ProductCode, Price, Quantity, TotalCost, Status) VALUES (37, '000037', 'CN', '49643-354', 8.92, 9, 80.28, 1); 
+	INSERT INTO [dbo].[Invoices] (Id, Identifier, CountryCode, ProductCode, Price, Quantity, TotalCost, Status) VALUES (38, '000038', 'PH', '0517-5610', 0.69, 5, 3.45, 1);
+	INSERT INTO [dbo].[Invoices] (Id, Identifier, CountryCode, ProductCode, Price, Quantity, TotalCost, Status) VALUES (39, '000039', 'ID', '63187-018', 3.60, 10, 36, 1);
+	INSERT INTO [dbo].[Invoices] (Id, Identifier, CountryCode, ProductCode, Price, Quantity, TotalCost, Status) VALUES (40, '000040', 'AR', '0009-3375', 5.91, 5, 29.55, 2); 
+	INSERT INTO [dbo].[Invoices] (Id, Identifier, CountryCode, ProductCode, Price, Quantity, TotalCost, Status) VALUES (41, '000041', 'CN', '10544-090', 0.63, 1, 0.63, 5); 
+	INSERT INTO [dbo].[Invoices] (Id, Identifier, CountryCode, ProductCode, Price, Quantity, TotalCost, Status) VALUES (42, '000042', 'UZ', '43063-307', 2.80, 1, 2.8, 5);
+	INSERT INTO [dbo].[Invoices] (Id, Identifier, CountryCode, ProductCode, Price, Quantity, TotalCost, Status) VALUES (43, '000043', 'CN', '37000-318', 1.19, 9, 10.71, 5); 
+	INSERT INTO [dbo].[Invoices] (Id, Identifier, CountryCode, ProductCode, Price, Quantity, TotalCost, Status) VALUES (44, '000044', 'ET', '64980-141', 9.79, 9, 88.11, 5);
+	INSERT INTO [dbo].[Invoices] (Id, Identifier, CountryCode, ProductCode, Price, Quantity, TotalCost, Status) VALUES (45, '000045', 'CN', '51346-235', 0.61, 1, 0.61, 3);
+	INSERT INTO [dbo].[Invoices] (Id, Identifier, CountryCode, ProductCode, Price, Quantity, TotalCost, Status) VALUES (46, '000046', 'AR', '49738-555', 9.12, 10, 91.2, 5); 
+	INSERT INTO [dbo].[Invoices] (Id, Identifier, CountryCode, ProductCode, Price, Quantity, TotalCost, Status) VALUES (47, '000047', 'PT', '57520-0263', 0.12, 10, 1.2, 1); 
+	INSERT INTO [dbo].[Invoices] (Id, Identifier, CountryCode, ProductCode, Price, Quantity, TotalCost, Status) VALUES (48, '000048', 'CN', '54868-6156', 0.20, 10, 2, 5);
+	INSERT INTO [dbo].[Invoices] (Id, Identifier, CountryCode, ProductCode, Price, Quantity, TotalCost, Status) VALUES (49, '000049', 'AR', '66594-444', 3.52, 3, 10.56, 4); 
+	INSERT INTO [dbo].[Invoices] (Id, Identifier, CountryCode, ProductCode, Price, Quantity, TotalCost, Status) VALUES (50, '000050', 'UA', '59779-280', 6.55, 9, 58.95, 1); 
+	INSERT INTO [dbo].[Invoices] (Id, Identifier, CountryCode, ProductCode, Price, Quantity, TotalCost, Status) VALUES (51, '000051', 'ID', '0168-0060', 5.84, 4, 23.36, 1); 
+	INSERT INTO [dbo].[Invoices] (Id, Identifier, CountryCode, ProductCode, Price, Quantity, TotalCost, Status) VALUES (52, '000052', 'TH', '49999-065', 6.09, 9, 54.81, 4); 
+	INSERT INTO [dbo].[Invoices] (Id, Identifier, CountryCode, ProductCode, Price, Quantity, TotalCost, Status) VALUES (53, '000053', 'VN', '61822-0046', 7.95, 8, 63.6, 2); 
+	INSERT INTO [dbo].[Invoices] (Id, Identifier, CountryCode, ProductCode, Price, Quantity, TotalCost, Status) VALUES (54, '000054', 'US', '61589-5315', 2.62, 5, 13.1, 3); 
+	INSERT INTO [dbo].[Invoices] (Id, Identifier, CountryCode, ProductCode, Price, Quantity, TotalCost, Status) VALUES (55, '000055', 'SD', '63739-200', 5.54, 10, 55.4, 3); 
+	INSERT INTO [dbo].[Invoices] (Id, Identifier, CountryCode, ProductCode, Price, Quantity, TotalCost, Status) VALUES (56, '000056', 'FR', '57344-113', 9.08, 1, 9.08, 5);
+	INSERT INTO [dbo].[Invoices] (Id, Identifier, CountryCode, ProductCode, Price, Quantity, TotalCost, Status) VALUES (57, '000057', 'TH', '54458-929', 6.71, 7, 46.97, 4); 
+	INSERT INTO [dbo].[Invoices] (Id, Identifier, CountryCode, ProductCode, Price, Quantity, TotalCost, Status) VALUES (58, '000058', 'DE', '10237-814', 2.96, 10, 29.6, 3); 
+	INSERT INTO [dbo].[Invoices] (Id, Identifier, CountryCode, ProductCode, Price, Quantity, TotalCost, Status) VALUES (59, '000059', 'NG', '11853-013', 9.33, 5, 46.65, 2); 
+	INSERT INTO [dbo].[Invoices] (Id, Identifier, CountryCode, ProductCode, Price, Quantity, TotalCost, Status) VALUES (60, '000060', 'PL', '68645-262', 6.86, 5, 34.3, 4);
+	INSERT INTO [dbo].[Invoices] (Id, Identifier, CountryCode, ProductCode, Price, Quantity, TotalCost, Status) VALUES (61, '000061', 'AR', '63868-926', 9.94, 6, 59.64, 2);
+	INSERT INTO [dbo].[Invoices] (Id, Identifier, CountryCode, ProductCode, Price, Quantity, TotalCost, Status) VALUES (62, '000062', 'SE', '62011-0101', 1.98, 9, 17.82, 1); 
+	INSERT INTO [dbo].[Invoices] (Id, Identifier, CountryCode, ProductCode, Price, Quantity, TotalCost, Status) VALUES (63, '000063', 'ID', '58301-181', 9.58, 4, 38.32, 5); 
+	INSERT INTO [dbo].[Invoices] (Id, Identifier, CountryCode, ProductCode, Price, Quantity, TotalCost, Status) VALUES (64, '000064', 'PH', '55312-615', 0.43, 3, 1.29, 2);
+	INSERT INTO [dbo].[Invoices] (Id, Identifier, CountryCode, ProductCode, Price, Quantity, TotalCost, Status) VALUES (65, '000065', 'ID', '36987-2648', 3.10, 4, 12.4, 4); 
+	INSERT INTO [dbo].[Invoices] (Id, Identifier, CountryCode, ProductCode, Price, Quantity, TotalCost, Status) VALUES (66, '000066', 'ID', '76282-248', 8.15, 9, 73.35, 5); 
+	INSERT INTO [dbo].[Invoices] (Id, Identifier, CountryCode, ProductCode, Price, Quantity, TotalCost, Status) VALUES (67, '000067', 'NI', '0363-0299', 0.19, 5, 0.95, 4);
+	INSERT INTO [dbo].[Invoices] (Id, Identifier, CountryCode, ProductCode, Price, Quantity, TotalCost, Status) VALUES (68, '000068', 'ZA', '63936-8750', 8.02, 5, 40.1, 2); 
+	INSERT INTO [dbo].[Invoices] (Id, Identifier, CountryCode, ProductCode, Price, Quantity, TotalCost, Status) VALUES (69, '000069', 'CN', '63736-920', 1.44, 9, 12.96, 2); 
+	INSERT INTO [dbo].[Invoices] (Id, Identifier, CountryCode, ProductCode, Price, Quantity, TotalCost, Status) VALUES (70, '000070', 'RU', '50236-001', 4.32, 6, 25.92, 2); 
+	INSERT INTO [dbo].[Invoices] (Id, Identifier, CountryCode, ProductCode, Price, Quantity, TotalCost, Status) VALUES (71, '000071', 'KP', '0115-6922', 6.63, 4, 26.52, 5); 
+	INSERT INTO [dbo].[Invoices] (Id, Identifier, CountryCode, ProductCode, Price, Quantity, TotalCost, Status) VALUES (72, '000072', 'CN', '54305-976', 9.05, 7, 63.35, 5);
+	INSERT INTO [dbo].[Invoices] (Id, Identifier, CountryCode, ProductCode, Price, Quantity, TotalCost, Status) VALUES (73, '000073', 'FR', '58232-9809', 6.06, 7, 42.42, 5); 
+	INSERT INTO [dbo].[Invoices] (Id, Identifier, CountryCode, ProductCode, Price, Quantity, TotalCost, Status) VALUES (74, '000074', 'PH', '62856-602', 3.96, 6, 23.76, 2); 
+	INSERT INTO [dbo].[Invoices] (Id, Identifier, CountryCode, ProductCode, Price, Quantity, TotalCost, Status) VALUES (75, '000075', 'RU', '41250-036', 0.94, 4, 3.76, 3); 
+	INSERT INTO [dbo].[Invoices] (Id, Identifier, CountryCode, ProductCode, Price, Quantity, TotalCost, Status) VALUES (76, '000076', 'US', '55316-469', 4.99, 1, 4.99, 3);
+	INSERT INTO [dbo].[Invoices] (Id, Identifier, CountryCode, ProductCode, Price, Quantity, TotalCost, Status) VALUES (77, '000077', 'FI', '50246-100', 1.27, 8, 10.16, 4); 
+	INSERT INTO [dbo].[Invoices] (Id, Identifier, CountryCode, ProductCode, Price, Quantity, TotalCost, Status) VALUES (78, '000078', 'PL', '36987-2657', 8.84, 1, 8.84, 2); 
+	INSERT INTO [dbo].[Invoices] (Id, Identifier, CountryCode, ProductCode, Price, Quantity, TotalCost, Status) VALUES (79, '000079', 'SE', '49288-0824', 1.39, 3, 4.17, 4);
+
+	SET IDENTITY_INSERT [dbo].[Invoices] OFF
+END
